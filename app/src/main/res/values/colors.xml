@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores da Bandeira -->
+    <color name="colorPrimary">#009C3B</color> <!-- Verde Bandeira -->
+    <color name="colorAccent">#FFDF00</color> <!-- Amarelo Bandeira -->
+    <color name="colorPrimaryDark">#002776</color> <!-- Azul Bandeira -->
+
+    <!-- Cor de Tema para o Background -->
+    <color name="colorThemeBackground">#4CAF50</color> <!-- Verde Tema (exemplo) -->
+
+    <!-- Cores para Textos -->
+    <color name="colorTextPrimary">#333333</color> <!-- Cor de texto primária -->
+    <color name="colorTextSecondary">#666666</color> <!-- Cor de texto secundária -->
+
+    <!-- Outras Cores Complementares -->
+    <color name="colorTextOnPrimary">#FFFFFF</color> <!-- Texto branco para contraste com o verde escuro -->
+    <color name="colorDivider">#BDBDBD</color> <!-- Divisor para elementos de UI -->
+    <color name="transparent">#00FFFFFF</color>
+</resources>
