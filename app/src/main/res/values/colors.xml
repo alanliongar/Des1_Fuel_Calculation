@@ -7,6 +7,7 @@
 
     <!-- Cor de Tema para o Background -->
     <color name="colorThemeBackground">#4CAF50</color> <!-- Verde Tema (exemplo) -->
+    <color name="colorThemeBackground2">#7fe283</color> <!-- Verde Tema mais claro -->
 
     <!-- Cores para Textos -->
     <color name="colorTextPrimary">#333333</color> <!-- Cor de texto primária -->

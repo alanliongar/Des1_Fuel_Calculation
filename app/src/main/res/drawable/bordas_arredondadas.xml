@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/colorThemeBackground"> <!-- Substitua #FFFFFF pela cor de fundo desejada -->
+    <corners
+        android:bottomRightRadius="500dp"
+        android:bottomLeftRadius="500dp"/>
+    <!-- Ajuste o valor de 16dp para aumentar ou diminuir o raio da curva -->
+</shape>
