@@ -18,3 +18,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+
+/*
+* 1 - tela de "boas vindas"
+* 2 - tela do preço do combustível
+* 3 - tela do consumo do carro por litro
+* 4 - Tela de distancia até o destino
+* 5 - Tela que mostra o resultado
+* */
