@@ -8,10 +8,12 @@
     <!-- Cor de Tema para o Background -->
     <color name="colorThemeBackground">#4CAF50</color> <!-- Verde Tema (exemplo) -->
     <color name="colorThemeBackground2">#7fe283</color> <!-- Verde Tema mais claro -->
+    <color name="colorThemeBackground3">#d2f4d3</color> <!-- Verde Tema ainda mais claro -->
 
     <!-- Cores para Textos -->
     <color name="colorTextPrimary">#333333</color> <!-- Cor de texto primária -->
     <color name="colorTextSecondary">#666666</color> <!-- Cor de texto secundária -->
+    <color name="colorTextAlarm">#9C0060</color>  <!-- Cor de texto alarme-->
 
     <!-- Outras Cores Complementares -->
     <color name="colorTextOnPrimary">#FFFFFF</color> <!-- Texto branco para contraste com o verde escuro -->

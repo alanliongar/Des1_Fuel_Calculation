@@ -12,14 +12,14 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="550dp"
         android:layout_weight="25"
         android:background="@drawable/bordas_arredondadas"
         android:clipToOutline="true"
         android:orientation="horizontal"
         android:weightSum="100">
 
-
+        <!--aumentei pra 550 (altura do linear layout), corrigir o gradiente-->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -49,6 +49,7 @@
         android:paddingBottom="10dp"
         android:text="Calculadora custo\nTrajeto"
         android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -62,6 +63,7 @@
         android:layout_height="wrap_content"
         android:paddingBottom="100dp"
         android:text="Vamos calcular o quanto custará sua viagem"
+        android:textColor="@color/colorPrimary"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="@+id/Titulo"
         app:layout_constraintBottom_toTopOf="@+id/butao"
@@ -71,14 +73,14 @@
 
     <Button
         android:id="@+id/butao"
-        android:layout_width="500dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginBottom="130dp"
+        android:layout_margin="130dp"
+        android:backgroundTint="@color/colorThemeBackground"
         android:text="Iniciar"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
