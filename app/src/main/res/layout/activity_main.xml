@@ -12,7 +12,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="550dp"
         android:layout_weight="25"
         android:background="@drawable/bordas_arredondadas"
         android:clipToOutline="true"
@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
-                android:src="@drawable/Cars2" />
+                android:src="@drawable/cars1" />
 
             <View
                 android:layout_width="match_parent"
