@@ -9,113 +9,129 @@
     android:weightSum="100"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:layout_weight="25"
+        android:layout_height="0dp"
         android:background="@drawable/bordas_arredondadas"
         android:clipToOutline="true"
-        android:orientation="horizontal"
-        android:weightSum="100">
+        app:layout_constraintBottom_toTopOf="@id/constraint_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!--aumentei pra 550 (altura do linear layout), corrigir o gradiente-->
-        <FrameLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_marginStart="0dp"
-            android:layout_weight="75">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/icone1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/posto" />
+                android:src="@drawable/posto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient_screen1" />
+                android:layout_height="0dp"
+                android:background="@drawable/gradient_screen1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </FrameLayout>
-    </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="25"
-        android:orientation="vertical"
-        android:weightSum="100"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/butao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout">
+        <!--eu coloquei o constraint Bottom to bottom of para o parent, será que não seria ao botao?-->
         <TextView
             android:id="@+id/Titulo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:gravity="start"
-            android:paddingStart="80dp"
-            android:paddingTop="120dp"
-            android:text="Preço do combustível"
+            android:layout_height="0dp"
+            android:gravity="bottom"
+            android:text="Preço do combustivel"
+            android:textAlignment="left"
             android:textColor="@color/colorPrimary"
-            android:textSize="50sp"
+            android:textSize="30sp"
             android:textStyle="bold"
+            app:flow_verticalAlign="bottom"
+            app:layout_constraintBottom_toTopOf="@id/textView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/passo"
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="90dp"
+            android:layout_marginTop="20dp"
+            android:gravity="bottom"
             android:text="Passo 1 de 3"
-            android:textColor="@color/colorPrimary"
-            android:textSize="25sp"
+            android:layout_marginStart="55dp"
+            android:textAlignment="left"
+            android:textColor="@color/colorTextAlarm"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Titulo" />
+            app:layout_constraintTop_toBottomOf="@+id/Titulo"
+            app:layout_constraintBottom_toTopOf="@id/innputbox"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
+            android:id="@+id/innputbox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="70dp"
-            android:background="@drawable/bdas_redondas_bgnd"
-            android:textColorHint="@color/colorPrimary"
+            android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="214dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bdas_redondas_bgnd">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Ex: 5.70"
-                android:textColor="@color/colorPrimary"
-                android:textSize="50dp"
-                android:textStyle="bold" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="Digite o preço do combustível (Litro) Ex: R$ 5.60"
+                android:textSize="13sp"
+                />
         </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
-    <!--Colocar aqui o fim do linearlayout-->
 
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/butao"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_margin="130dp"
+        android:layout_margin="40dp"
         android:backgroundTint="@color/colorThemeBackground"
         android:text="Próximo"
-        android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
