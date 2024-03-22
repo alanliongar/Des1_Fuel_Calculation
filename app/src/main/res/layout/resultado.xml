@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorThemeBackground2"
+    android:weightSum="100"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +23,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_marginStart="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -32,9 +33,9 @@
             <ImageView
                 android:id="@+id/icone1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/cars1"
+                android:src="@drawable/bdas_redondas_bgnd"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -49,50 +50,72 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Custo Total\noieee" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!--        Inserir aqui, o custo completo-->
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_2"
+        android:id="@+id/horizontais"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:paddingBottom="50dp"
         app:layout_constraintBottom_toTopOf="@id/butao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout">
-        <!--eu coloquei o constraint Bottom to bottom of para o parent, será que não seria ao botao?-->
-        <TextView
-            android:id="@+id/Titulo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:gravity="bottom"
-            android:text="Calculadora custo\nTrajeto"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:flow_verticalAlign="bottom"
-            app:layout_constraintBottom_toTopOf="@id/textView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/constraint_2" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/resumo_titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="top"
-            android:text="Vamos calcular o quanto custará sua viagem"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="15dp"
+            android:text="Resumo das informações"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/resumo1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resumo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preço\n\nConsumo\n\nDistancia (Km)"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/resumo2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/resumo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Titulo" />
+            app:layout_constraintStart_toEndOf="@+id/resumo1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="10.0\n\n11.0\n\n11.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+    />
 
     <Button
         android:id="@+id/butao"
@@ -100,7 +123,7 @@
         android:layout_height="60dp"
         android:layout_margin="40dp"
         android:backgroundTint="@color/colorThemeBackground"
-        android:text="Iniciar"
+        android:text="Novo cálculo"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
