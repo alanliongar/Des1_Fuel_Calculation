@@ -4,7 +4,9 @@
         android:centerX="50%"
         android:centerY="50%"
         android:endColor="@color/colorThemeBackground"
-        android:gradientRadius="300dp"
+        android:gradientRadius="125dp"
         android:startColor="@android:color/transparent"
         android:type="radial" />
 </shape>
+
+<!--Aprender como faz pra deixar o raio responsivo, do gradiente-->

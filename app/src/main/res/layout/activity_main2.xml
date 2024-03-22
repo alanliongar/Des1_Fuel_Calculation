@@ -12,43 +12,26 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/bordas_arredondadas"
-        android:clipToOutline="true"
-        app:layout_constraintBottom_toTopOf="@id/constraint_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.38"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:clipToOutline="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="300dp"
+            android:layout_marginStart="0dp">
 
             <ImageView
                 android:id="@+id/icone1"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="300dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/cars1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:src="@drawable/cars1" />
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="@drawable/gradient_screen1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_screen1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -68,9 +51,9 @@
             android:id="@+id/Titulo"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:gravity="bottom"
             android:text="Calculadora custo\nTrajeto"
             android:textAlignment="center"
+            android:gravity="bottom"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp"
             android:textStyle="bold"
