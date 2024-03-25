@@ -66,11 +66,10 @@
             android:id="@+id/Titulo"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:gravity="bottom"
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
+            android:gravity="bottom"
             android:text="Preço do combustivel"
-            android:textAlignment="left"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -84,40 +83,39 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
             android:layout_marginTop="20dp"
             android:gravity="bottom"
             android:text="Passo 1 de 3"
-            android:layout_marginStart="55dp"
-            android:textAlignment="left"
             android:textColor="@color/colorTextAlarm"
             android:textSize="16sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/innputbox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Titulo"
-            app:layout_constraintBottom_toTopOf="@id/innputbox"/>
+            app:layout_constraintTop_toBottomOf="@+id/Titulo" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/innputbox"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bdas_redondas_bgnd"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textView"
             tools:layout_editor_absoluteX="165dp"
-            tools:layout_editor_absoluteY="214dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:background="@drawable/bdas_redondas_bgnd">
+            tools:layout_editor_absoluteY="214dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:hint="Digite o preço do combustível (Litro) Ex: R$ 5.60"
-                android:textSize="13sp"
-                />
+                android:inputType="numberDecimal"
+                android:textSize="13sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
