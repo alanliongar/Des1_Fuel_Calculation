@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/cars2"
+                android:src="@drawable/posto"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,7 @@
         android:id="@+id/constraint_2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/butao"
+        app:layout_constraintBottom_toTopOf="@id/butaoP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout">
@@ -69,8 +69,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
             android:gravity="bottom"
-            android:text="Distancia até o destino"
-            android:textAlignment="left"
+            android:text="Preço do combustivel"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -87,18 +86,17 @@
             android:layout_marginStart="55dp"
             android:layout_marginTop="20dp"
             android:gravity="bottom"
-            android:text="Passo 3 de 3"
-            android:textAlignment="left"
+            android:text="Passo 1 de 3"
             android:textColor="@color/colorTextAlarm"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/innputbox"
+            app:layout_constraintBottom_toTopOf="@id/innputboxP"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Titulo" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/innputbox"
+            android:id="@+id/innputboxP"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="30dp"
@@ -112,11 +110,13 @@
             tools:layout_editor_absoluteY="214dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/precoP"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:hint="Digite a distancia do seu percurso. Ex: 40.0 km"
+                android:hint="Digite o preço do combustível (Litro) Ex: R$ 5.60"
                 android:inputType="numberDecimal"
+                android:maxLength="5"
                 android:textSize="13sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -124,7 +124,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/butao"
+        android:id="@+id/butaoP"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="40dp"

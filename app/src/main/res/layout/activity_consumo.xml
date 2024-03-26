@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/bdas_redondas_bgnd"
+                android:src="@drawable/carro"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -50,72 +50,77 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Custo Total\noieee" />
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--        Inserir aqui, o custo completo-->
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/horizontais"
+        android:id="@+id/constraint_2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/butao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout">
-
+        <!--eu coloquei o constraint Bottom to bottom of para o parent, será que não seria ao botao?-->
         <TextView
-            android:id="@+id/resumo_titulo"
+            android:id="@+id/Titulo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:text="Resumo das informações"
-            android:textSize="30dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:gravity="bottom"
+            android:text="Consumo do carro"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/resumo1"
+            app:flow_verticalAlign="bottom"
+            app:layout_constraintBottom_toTopOf="@id/textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/resumo1"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Preço\n\nConsumo\n\nDistancia (Km)"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/resumo2"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="20dp"
+            android:gravity="bottom"
+            android:text="Passo 2 de 3"
+            android:textColor="@color/colorTextAlarm"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/innputbox"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Titulo" />
 
-            />
-
-        <TextView
-            android:id="@+id/resumo2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/innputbox"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bdas_redondas_bgnd"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/resumo1"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="10.0\n\n11.0\n\n11.0" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="214dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/consumo"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="Digite o consumo por km do veículo. Ex: 3 km/L"
+                android:inputType="numberDecimal"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-    />
 
     <Button
         android:id="@+id/butao"
@@ -123,7 +128,7 @@
         android:layout_height="60dp"
         android:layout_margin="40dp"
         android:backgroundTint="@color/colorThemeBackground"
-        android:text="Novo cálculo"
+        android:text="Próximo"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

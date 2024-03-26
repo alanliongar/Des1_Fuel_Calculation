@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/posto"
+                android:src="@drawable/bdas_redondas_bgnd"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -50,76 +50,72 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Custo Total\noieee" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!--        Inserir aqui, o custo completo-->
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_2"
+        android:id="@+id/horizontais"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/butao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout">
-        <!--eu coloquei o constraint Bottom to bottom of para o parent, será que não seria ao botao?-->
+
         <TextView
-            android:id="@+id/Titulo"
+            android:id="@+id/resumo_titulo"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            android:gravity="bottom"
-            android:text="Preço do combustivel"
-            android:textColor="@color/colorPrimary"
-            android:textSize="30sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="Resumo das informações"
+            android:textSize="30dp"
             android:textStyle="bold"
-            app:flow_verticalAlign="bottom"
-            app:layout_constraintBottom_toTopOf="@id/textView"
+            app:layout_constraintBottom_toTopOf="@id/resumo1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
+            android:id="@+id/resumo1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
-            android:layout_marginTop="20dp"
-            android:gravity="bottom"
-            android:text="Passo 1 de 3"
-            android:textColor="@color/colorTextAlarm"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/innputbox"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Preço\n\nConsumo\n\nDistancia (Km)"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/resumo2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Titulo" />
+            app:layout_constraintTop_toTopOf="parent"
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/innputbox"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:background="@drawable/bdas_redondas_bgnd"
+            />
+
+        <TextView
+            android:id="@+id/resumo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView"
-            tools:layout_editor_absoluteX="165dp"
-            tools:layout_editor_absoluteY="214dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:hint="Digite o preço do combustível (Litro) Ex: R$ 5.60"
-                android:inputType="numberDecimal"
-                android:textSize="13sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
+            app:layout_constraintStart_toEndOf="@+id/resumo1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="10.0\n\n11.0\n\n11.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+    />
 
     <Button
         android:id="@+id/butao"
@@ -127,11 +123,11 @@
         android:layout_height="60dp"
         android:layout_margin="40dp"
         android:backgroundTint="@color/colorThemeBackground"
-        android:text="Próximo"
+        android:text="Novo cálculo"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraint_2" />
+        app:layout_constraintTop_toBottomOf="@id/horizontais" />
 </androidx.constraintlayout.widget.ConstraintLayout>
