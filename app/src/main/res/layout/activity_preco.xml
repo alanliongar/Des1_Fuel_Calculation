@@ -102,6 +102,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/bdas_redondas_bgnd"
+            android:padding="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
