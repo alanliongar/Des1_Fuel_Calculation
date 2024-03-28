@@ -3,6 +3,7 @@ package com.example.des1_fuel_calculation
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -31,11 +32,17 @@ class resultado : AppCompatActivity() {
         val texto: String = "$precoSTR\n\n$consSTR\n\n$distSTR"
         val resultado: Float = (dist / cons) * preco
         val btn_novo = findViewById<Button>(R.id.butao)
+        val btn_voltar_p = findViewById<ImageButton>(R.id.voltar_r)
         val textV = findViewById<TextView>(R.id.resumo2)
         val textR = findViewById<TextView>(R.id.texto_final)
         textV.text = texto
         textR.text = "Custo Total\nR$ ${"%.2f".format(resultado)}"
-
+        btn_voltar_p.setOnClickListener {
+            val intentV = Intent(this, com.example.des1_fuel_calculation.distancia::class.java)
+            intentV.putExtra(KEY_CONS, cons)
+            intentV.putExtra(KEY_PRECO, preco)
+            startActivity(intentV)
+        }
         btn_novo.setOnClickListener {
             val intent = Intent(this, com.example.des1_fuel_calculation.preco::class.java)
             startActivity(intent)

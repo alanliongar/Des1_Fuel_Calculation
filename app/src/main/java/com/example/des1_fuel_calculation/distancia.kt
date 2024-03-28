@@ -3,6 +3,7 @@ package com.example.des1_fuel_calculation
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,9 +19,14 @@ class distancia : AppCompatActivity() {
         setContentView(R.layout.activity_distancia)
         val btn_calc = findViewById<Button>(R.id.butao)
         val inputbox_dist = findViewById<TextInputEditText>(R.id.distancia)
+        val btn_voltar_p = findViewById<ImageButton>(R.id.voltar_d)
         val preco = intent.getFloatExtra(KEY_PRECO, 0f)
         val consumo = intent.getFloatExtra(KEY_CONS, 0f)
-
+        btn_voltar_p.setOnClickListener {
+            val intentV = Intent(this, com.example.des1_fuel_calculation.consumo::class.java)
+            intentV.putExtra(KEY_PRECO, preco)
+            startActivity(intentV)
+        }
         btn_calc.setOnClickListener {
             if (inputbox_dist.text.toString().isBlank()) {
                 Snackbar.make(
