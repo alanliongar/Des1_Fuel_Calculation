@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/carro"
+                android:src="@drawable/carrin"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -98,9 +98,10 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/innputbox"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
+            app:hintEnabled="false"
             android:background="@drawable/bdas_redondas_bgnd"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -110,13 +111,16 @@
             tools:layout_editor_absoluteY="214dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
                 android:id="@+id/consumo"
-                android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:background="@drawable/bdas_redondas_bgnd"
+                android:drawableStart="@drawable/carro"
                 android:hint="Digite o consumo por km do veículo. Ex: 3 km/L"
                 android:inputType="numberDecimal"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
 
