@@ -118,7 +118,7 @@
                 android:hint="Digite o preço do combustível (Litro) Ex: R$ 5.60"
                 android:inputType="numberDecimal"
                 android:maxLength="5"
-                android:textSize="13sp" />
+                android:textSize="8sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
