@@ -57,14 +57,27 @@
                 android:gravity="center"
                 android:textSize="30dp"
                 android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Custo Total\noieee" />
+                tools:text="Custo Total\nR$ 20.00" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/voltar_r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorThemeBackground2"
+            android:background="@drawable/circulo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="15dp"
+            android:src="@drawable/voltar"
+            android:textSize="30sp"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!--        Inserir aqui, o custo completo-->
@@ -85,6 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:text="Resumo das informações"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="30dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/resumo1"
@@ -97,7 +111,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Preço\n\nConsumo\n\nDistancia (Km)"
-            android:textSize="20sp"
+            android:textSize="26sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/resumo2"
             app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +125,9 @@
             android:id="@+id/resumo2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="26sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/resumo1"

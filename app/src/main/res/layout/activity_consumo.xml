@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/carro"
+                android:src="@drawable/carrin"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +51,18 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/voltar_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorThemeBackground2"
+            android:background="@drawable/circulo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="15dp"
+            android:src="@drawable/voltar"
+            android:textSize="30sp"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -62,6 +74,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout">
         <!--eu coloquei o constraint Bottom to bottom of para o parent, será que não seria ao botao?-->
+
         <TextView
             android:id="@+id/Titulo"
             android:layout_width="match_parent"
@@ -76,6 +89,7 @@
             app:flow_verticalAlign="bottom"
             app:layout_constraintBottom_toTopOf="@id/textView"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -98,9 +112,10 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/innputbox"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
+            app:hintEnabled="false"
             android:background="@drawable/bdas_redondas_bgnd"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -110,13 +125,16 @@
             tools:layout_editor_absoluteY="214dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
                 android:id="@+id/consumo"
-                android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:background="@drawable/bdas_redondas_bgnd"
+                android:drawableStart="@drawable/carro"
                 android:hint="Digite o consumo por km do veículo. Ex: 3 km/L"
                 android:inputType="numberDecimal"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
 

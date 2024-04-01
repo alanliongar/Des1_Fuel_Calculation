@@ -51,6 +51,18 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/voltar_p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorThemeBackground2"
+            android:background="@drawable/circulo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="15dp"
+            android:src="@drawable/voltar"
+            android:textSize="30sp"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -98,11 +110,11 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/innputboxP"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/bdas_redondas_bgnd"
-            android:padding="2dp"
+            app:hintEnabled="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -113,8 +125,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/precoP"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/mony"
+                android:drawablePadding="5dp"
+                android:background="@drawable/bdas_redondas_bgnd"
                 android:hint="Digite o preço do combustível (Litro) Ex: R$ 5.60"
                 android:inputType="numberDecimal"
                 android:maxLength="5"
