@@ -35,7 +35,6 @@ class distancia : AppCompatActivity() {
                     Snackbar.LENGTH_LONG
                 ).show()
             } else {
-                //val distanciaa: Float = inputbox_dist.text.toString().toFloat()
                 val intentD = Intent(this, resultado::class.java)
                 intentD.putExtra(KEY_DIST, inputbox_dist.text.toString().toFloat())
                 intentD.putExtra(KEY_PRECO, preco)

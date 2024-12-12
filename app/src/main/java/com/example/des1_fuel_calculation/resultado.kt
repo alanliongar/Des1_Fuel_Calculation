@@ -36,7 +36,7 @@ class resultado : AppCompatActivity() {
         val textV = findViewById<TextView>(R.id.resumo2)
         val textR = findViewById<TextView>(R.id.texto_final)
         textV.text = texto
-        textR.text = "Custo Total\nR$ ${"%.2f".format(resultado)}"
+        textR.text = "Total cost\n$ ${"%.2f".format(resultado)}"
         btn_voltar_p.setOnClickListener {
             val intentV = Intent(this, com.example.des1_fuel_calculation.distancia::class.java)
             intentV.putExtra(KEY_CONS, cons)

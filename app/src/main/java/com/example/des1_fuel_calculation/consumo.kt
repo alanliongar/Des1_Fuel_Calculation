@@ -33,7 +33,6 @@ class consumo : AppCompatActivity() {
                     Snackbar.LENGTH_LONG
                 ).show()
             } else {
-                //val consumoo: Float = inputbox.text.toString().toFloat()
                 val intentC = Intent(this, distancia::class.java)
                 intentC.putExtra(KEY_CONS, inputbox.text.toString().toFloat())
                 intentC.putExtra(KEY_PRECO, preco)

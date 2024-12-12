@@ -22,22 +22,3 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
-/*
-1 - Pequenos ajustes (icones) nas telas
-2 - Conexões entre as telas
-3 - Mostrar resultado final
-4 - Compilar programa
-5 - Ver como colocar um vídeo no github
-*/
-
-//            if (preco == "") {
-//                Snackbar.make(edtPreco, "Preencha o preço do combustível", Snackbar.LENGTH_LONG)
-//                    .show()
-//            }
-//mudar de tela
-//intent -
-
-//Recuperar os componentes editText
-//    Criar 01 variável e associar o componente de UI (edittext-input)
-//    val edtConsumo = findViewById<TextInputEditText>(R.id.consumo)
-//    val edtDistancia = findViewById<TextInputEditText>(R.id.distancia)

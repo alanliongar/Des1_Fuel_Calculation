@@ -15,7 +15,7 @@
         android:layout_height="0dp"
         android:background="@drawable/bordas_arredondadas"
         android:clipToOutline="true"
-        app:layout_constraintBottom_toTopOf="@id/constraint_2"
+        app:layout_constraintBottom_toTopOf="@id/horizontais"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.38"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Custo Total\nR$ 20.00" />
+                tools:text="Total cost\n$ 20.00" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -80,7 +80,6 @@
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--        Inserir aqui, o custo completo-->
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -97,7 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:text="Resumo das informações"
+            android:text="Summary"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="30dp"
             android:textStyle="bold"
@@ -110,7 +109,7 @@
             android:id="@+id/resumo1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Preço\n\nConsumo\n\nDistancia (Km)"
+            android:text="Price\n\nConsumption\n\nDistance (km)"
             android:textSize="26sp"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
@@ -142,7 +141,7 @@
         android:layout_height="60dp"
         android:layout_margin="40dp"
         android:backgroundTint="@color/colorThemeBackground"
-        android:text="Novo cálculo"
+        android:text="New calculation"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
