@@ -1,34 +1,33 @@
-## Calculadora de custo do trajeto
-Esse projeto é um aplicativo android nativo, desenvolvido com a linguagem de programação Kotlin, tem como principal funcionalidade fazer o cálculo do custo do trajeto, dado o preço da gasolina, o consumo do carro e mostrar o resultado na tela seguinte.
+## Trip cost calculator
+
+This project is a native Android application developed using the Kotlin programming language. Its
+main functionality is to calculate the trip cost based on the fuel price, car consumption, and
+display the result on the next screen.
 
 ## :camera_flash: Screenshots
+
 <p float="left">
-  <img src="https://github.com/alanliongar/Des1_Fuel_Calculation/assets/129612933/f97dca73-74ba-4a79-8618-aed1f36f002a" width="250" />
-  <img src="https://github.com/alanliongar/Des1_Fuel_Calculation/assets/129612933/00060fac-d52b-4e62-a982-0ba85155639e" width="250" /> 
-  <img src="https://github.com/alanliongar/Des1_Fuel_Calculation/assets/129612933/c29e08ae-d443-4c81-ae7f-cc1d1ca8aab0" width="250" />
+  <img src="https://github.com/alanliongar/Des1_Fuel_Calculation/blob/master/Screenshot_20241212_055443.png" width="250" />
+  <img src="https://github.com/alanliongar/Des1_Fuel_Calculation/blob/master/Screenshot_20241212_055542.png" width="250" /> 
+  <img src="https://github.com/alanliongar/Des1_Fuel_Calculation/blob/master/Screenshot_20241212_055923.png" width="250" />
 </p>
 
-## Video - app em funcionamento
-[Video_App.webm](https://github.com/alanliongar/Des1_Fuel_Calculation/assets/129612933/87615f7b-67e0-4b32-8ab1-3d165ae71156)
+## Technologies
 
-
-## Tecnologias
 - Activity
 - Intent
 - Snackbar
 - ViewGroups
-  - ConstraintLayout
+    - ConstraintLayout
 - Views
-  - ImageView
-  - TextView
-  - EditText
-  - Imagebutton
-  - Button
-
-
-
+    - ImageView
+    - TextView
+    - EditText
+    - Imagebutton
+    - Button
 
 ## License
+
 ```
 The MIT License (MIT)
 
